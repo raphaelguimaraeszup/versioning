@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Testing Versioning
+          Testing Versioning Major
         </a>
       </header>
     </div>

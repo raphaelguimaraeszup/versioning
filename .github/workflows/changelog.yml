@@ -16,6 +16,15 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      # configura o GITHUB_TOKEN
+      # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/authenticating-with-the-github_token
+      - name: Configura o GitHub token
+        uses: fregante/setup-git-token@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: "Gerador de changelog"
+          email: "changelog@users.noreply.github.com"
+
       # instala a versão 11.x do Node.js
       - name: Instala o Node.js 11.x
         uses: actions/setup-node@v1
